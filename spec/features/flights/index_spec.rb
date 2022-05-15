@@ -28,7 +28,7 @@ RSpec.describe Flight, type: :feature do
       flight44 = airline4.flights.create!(destination: 'Los Angelos', flight_number: 44, nonstop: true)
 
       visit '/flights'
-      save_and_open_page
+
 
       flights = Flight.all
       flights.each do |flight|
