@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+table { border-collapse: collapse;
+width: 30%;}
+tr {border-bottom: 1px solid #ddd;}
+td {
+  padding-left: 125px; padding-top: 5px; padding-bottom: 5px;
+}
+</style>
+</head>
+<body>
+
+<section id = "Flight">
+<table>
+<caption><strong><%="Flight #{@flight.flight_number}"%></caption>
+  <tr>
+    <th>Flight ID</th>
+    <td><%="#{@flight.id}"%></td>
+  </tr>
+  <tr>
+    <th>Destination</th>
+    <td><%="#{@flight.destination}"%></td>
+  </tr>
+  <tr>
+    <th>Airline</th>
+    <td><%="#{@flight.airline.name}"%></td>
+  </tr>
+  <tr>
+    <th>Non-Stop?</th>
+    <td><%="#{@flight.nonstop.to_s}"%></td>
+  </tr>
+</table>
+  </section>
+</body>
+</html>

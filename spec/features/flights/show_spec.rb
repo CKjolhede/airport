@@ -31,9 +31,12 @@ RSpec.describe Flight, type: :feature do
     it 'shows flight with flight id and all attributes' do
       flights = Flight.all
       flights.each do |flight|
-        visit '/flights/flight.id'
-        within('#flights-flight_id') do
-          expect(page).to have_content("Flight-#{flight.flight_number}")
+        visit "/flights/#{flight.id}"
+        save_and_open_page
+
+        
+        within("#Flight") do
+          expect(page).to have_content("#{flight.flight_number}")
           expect(page).to have_content(flight.destination.to_s)
           expect(page).to have_content(flight.airline.name.to_s)
           expect(page).to have_content(flight.nonstop.to_s)
