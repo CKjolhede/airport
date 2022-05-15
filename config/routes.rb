@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get '/', to: 'welcome#index'
   get '/airlines', to: 'airlines#index'
-  
+  get '/airlines/:id', to: 'airlines#show'
 end

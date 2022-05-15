@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-14T20:16:25-06:00">2022-05-14T20:16:25-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-15T04:29:50-06:00">2022-05-15T04:29:50-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  98.25%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.08
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>64</b> relevant lines,
-    <span class="green"><b>64</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>57</b> relevant lines,
+    <span class="green"><b>56</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  98.25%
 </span>
 )
   </div>
@@ -71,6 +71,28 @@
       <tbody>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#ec9aecc95b4fe86a95c51b7e2ffea5579a467ae8" class="src_link" title="app/controllers/airlines_controller.rb">app/controllers/airlines_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">80.00 %</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.80</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#eab798bf11cc83ed8cec86016199327959ad3e7c" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#d4b9e9704d4723c0984aa5ee04334552272d12d3" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">2</td>
@@ -84,9 +106,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8e1b4aa3a746749eaf0c1b04ca213afced8b92d2" class="src_link" title="app/models/airline.rb">app/models/airline.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -98,17 +120,6 @@
             <td class="cell--number">3</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#0656f0f34961e4b371279fd7ac7f6feb82684be7" class="src_link" title="app/models/flight.rb">app/models/flight.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -261,21 +272,10 @@
             <td class="strong t-file__name"><a href="#28bfa21ed0bb945e426ef25d44289bfdead9d818" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">7</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#0824fc15daad7cd5da9a4895f9d1626358189b05" class="src_link" title="spec/models/flight_spec.rb">spec/models/flight_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
             
           </tr>
         
@@ -295,6 +295,189 @@
       </div>
 
       <div class="source_files">
+      
+        <div class="source_table" id="ec9aecc95b4fe86a95c51b7e2ffea5579a467ae8">
+  <div class="header">
+    <h3>app/controllers/airlines_controller.rb</h3>
+    <h4>
+      <span class="red">
+  80.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>5</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class AirlinesController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">    @airline = Airline.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @airlines = Airline.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="eab798bf11cc83ed8cec86016199327959ad3e7c">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ApplicationController &lt; ActionController::Base</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="d4b9e9704d4723c0984aa5ee04334552272d12d3">
   <div class="header">
@@ -363,8 +546,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -426,34 +609,12 @@
 
             
 
-            <code class="ruby">  validates_presence_of :delays</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">  validates_presence_of :rating</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -464,7 +625,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -529,114 +690,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="0656f0f34961e4b371279fd7ac7f6feb82684be7">
-  <div class="header">
-    <h3>app/models/flight.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class Flight &lt; ApplicationRecord</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  belongs_to :airline</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  validates_presence_of :flight_number</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  validates_presence_of :destination</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  validates_presence_of :nonstop</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -3103,8 +3156,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3171,236 +3224,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="0824fc15daad7cd5da9a4895f9d1626358189b05">
-  <div class="header">
-    <h3>spec/models/flight_spec.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="1">
-            
-            
-
-            
-
-            <code class="ruby"># flight_spec</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;rails_helper&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">RSpec.describe Flight, type: :model do</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    describe &#39;validations&#39; do</code>
+            <code class="ruby">  get &#39;/airlines/:id&#39;, to: &#39;airlines#show&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      it { should validate_presence_of :flight_number}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      it { should validate_presence_of :destination }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      it { should validate_presence_of :nonstop }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    describe &#39;relationship&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="13">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">        it { should belong_to :airline }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
