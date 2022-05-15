@@ -28,13 +28,15 @@ RSpec.describe Flight, type: :feature do
       flight44 = airline4.flights.create!(destination: 'Los Angelos', flight_number: 44, nonstop: true)
 
       visit '/flights'
+      save_and_open_page
+
       flights = Flight.all
       flights.each do |flight|
-        binding.pry
         within("#flight-#{flight.id}")
-        airline = Airline.find(flight.airline_id)
-        expect(page).to have_content("Flight #{flight.id}", "Destination: #{flight.destination}", 
-          "Airline: #{airline.name}", "Nonstop? #{flight.nonstop}")
+        expect(page).to have_content("Flight #{flight.id}")
+        expect(page).to have_content("#{flight.destination}")
+        expect(page).to have_content("#{flight.airline.name}")
+        expect(page).to have_content("#{flight.nonstop}")
       end
     end
   end
