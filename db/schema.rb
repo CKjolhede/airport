@@ -10,28 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_11_213518) do
-
+ActiveRecord::Schema.define(version: 20_220_511_213_518) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "airlines", force: :cascade do |t|
-    t.string "name"
-    t.boolean "delays"
-    t.integer "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'airlines', force: :cascade do |t|
+    t.string 'name'
+    t.boolean 'delays'
+    t.integer 'rating'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "flights", force: :cascade do |t|
-    t.string "destination"
-    t.integer "flight_number"
-    t.boolean "nonstop"
-    t.bigint "airline_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["airline_id"], name: "index_flights_on_airline_id"
+  create_table 'flights', force: :cascade do |t|
+    t.string 'destination'
+    t.integer 'flight_number'
+    t.boolean 'nonstop'
+    t.bigint 'airline_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['airline_id'], name: 'index_flights_on_airline_id'
   end
 
-  add_foreign_key "flights", "airlines"
+  add_foreign_key 'flights', 'airlines'
 end
