@@ -9,7 +9,7 @@
 Airline.destroy_all
 Flight.destroy_all
 
-airline1 = Airline.create(name: 'Alpha Air Lines', delays: 'true', rating: 2)
-airline2 = Airline.create(name: 'Conurbation Airlines', delays: 'true', rating: 4)
-airline3 = Airline.create(name: 'North East Airlines', delays: 0, rating: 7)
-airline4 = Airline.create(name: 'Divided Airlines', delays: 0, rating: 7)
+airline1 = Airline.create(name: 'Alpha Air Lines', on_time: 'true', rating: 2)
+airline2 = Airline.create(name: 'Conurbation Airlines', rating: 1)
+airline3 = Airline.create(name: 'North East Airlines', on_time: 0, rating: 8)
+airline4 = Airline.create(name: 'Divided Airlines',  rating: 7)
