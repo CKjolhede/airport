@@ -1,6 +1,6 @@
 class AirlinesController < ApplicationController
 
-    def index
-        # airlines=Airlines.all 
-    end
+  def index
+    # airlines=Airlines.all
+  end
 end
