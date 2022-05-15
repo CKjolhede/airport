@@ -1,5 +1,5 @@
 class Airline < ApplicationRecord
-  has_many :flights
+  has_many :flights, dependent: :destroy
 
   validates_presence_of :name
   validates_presence_of :rating

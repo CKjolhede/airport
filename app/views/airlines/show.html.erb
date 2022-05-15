@@ -1,1 +1,7 @@
 <h1><%= "#{@airline.name}"%></h1>
+
+<div>
+<h2>Airline Information:</h2>
+<strong><p><%="Airline ID = #{@airline.id}"%></p>
+<p><%= "#{@airline.on_time ? 'All Flights On Time' : 'Some Flights Experiencing Delays'}" %></p>
+<p><%= "Airline Rating = #{@airline.rating}"%></strong></div></p>
