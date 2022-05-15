@@ -1,9 +1,9 @@
 class Airline < ApplicationRecord
-  has_many :Flight
+  has_many :flights
 
-  validate_presence_of :name
-  validate_presence_of :delays
-  validate_presence_of :rating
+  validates_presence_of :name
+  validates_presence_of :delays
+  validates_presence_of :rating
   
 
 end
