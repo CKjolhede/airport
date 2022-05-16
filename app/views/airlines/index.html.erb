@@ -1,5 +1,32 @@
-<h1>All Airlines</h1>
+<html>
+<head>
+<style>
+table { border-collapse: collapse;
+width: 50%;}
+tr {border-bottom: 1px solid #ddd;}
+td {
+  padding-left: 125px; padding-top: 5px; padding-bottom: 5px;
+}
+</style>
+</head>
+<body>
+<h2>All Flights</h2>
 
+<table>
+<caption><h3><strong>All Airlines</strong></h3></caption>
+  <tr>
+    <th>Airline</th>
+    <th>Date/Time Record Created</th>
+    <th>Delete Record?</th>
+  </tr>
 <% @airlines.each do |airline|%> 
-<h2><li><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></li></h2></br>
-<%end%>
+    <tr>
+      <td><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></td>
+      <td><%="#{airline.create_at}"%></td>
+      <td><%= button_to "delete", airline_path
+      (:id => airline.id), :method => :delete %></td>
+      <td><%="#{flight.nonstop}"%></td>
+    </tr>
+<% end %>
+</table>
+</body>

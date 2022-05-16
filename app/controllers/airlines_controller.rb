@@ -4,6 +4,6 @@ class AirlinesController < ApplicationController
   end
 
   def index
-    @airlines = Airline.all
+    @airlines = Airline.sort_by_creation
   end
 end
