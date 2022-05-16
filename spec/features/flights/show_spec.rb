@@ -32,8 +32,6 @@ RSpec.describe Flight, type: :feature do
       flights = Flight.all
       flights.each do |flight|
         visit "/flights/#{flight.id}"
-        save_and_open_page
-
         
         within("#Flight") do
           expect(page).to have_content("#{flight.flight_number}")

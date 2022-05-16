@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+table { border-collapse: collapse;
+width: 50%;}
+table.center { margin-left: auto;
+  margin-right: auto; }
+tr {border-bottom: 1px solid #ddd;}
+tr:hover {background-color: #D6EEEE;}
+td {padding-left: 100px; padding-top: 5px; padding-bottom: 5px;}
+</style>
+</head>
+<body>
+
+<table>
+<caption><h2><strong><%="All #{@airline.name} Flights"%></strong></h2></caption>
+  <tr><h3>
+    <th>Flight</th>
+    <th>Destination</th>
+    <th>Nonstop?</th></h3>
+  </tr>
+<% @flights.each do |flight|%>
+  <section id = "Flight-<%=flight.id%>">
+    <tr>
+      <td><%="Flight #{flight.id}"%></td>
+      <td><%="#{flight.destination}"%></td>
+      <td><%="#{flight.nonstop}"%></td>
+    </tr>
+  </section>
+<% end %>
+</table>
+</body>
+</html>
