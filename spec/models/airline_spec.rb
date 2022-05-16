@@ -19,8 +19,7 @@ RSpec.describe Airline, type: :model do
       airline4 = Airline.create!(name: 'Divided Airlines', rating: 7)
       sleep 1
       airline3 = Airline.create!(name: 'North East Airlines', on_time: 0, rating: 8)
-      @airlines = Airline.all
-      expect(@airlines.in_order).to eq([airline2, airline1, airline4, airline3])
+      expect(Airline.in_order).to eq([airline2, airline1, airline4, airline3])
     end
   end
 end
