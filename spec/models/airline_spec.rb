@@ -10,7 +10,7 @@ RSpec.describe Airline, type: :model do
     it { should have_many :flights }
   end
 
-  describe 'instance variables' do
+  describe 'class variable' do
     it 'puts airlines in descending order by creation date' do
       airline2 = Airline.create!(name: 'Conurbation Airlines', rating: 1)
       sleep 1
