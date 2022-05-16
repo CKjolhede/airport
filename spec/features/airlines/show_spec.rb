@@ -47,10 +47,9 @@ RSpec.describe Airline, type: :feature do
         flight12 = airline1.flights.create(destination: 'New York', flight_number: 12, nonstop: false)
         flight13 = airline1.flights.create(destination: 'Atlanta', flight_number: 13, nonstop: true)
         flight14 = airline1.flights.create(destination: 'Washington DC', flight_number: 14, nonstop: false)
-        flight21 = airline2.flights.create(destination: 'Cleveland', flight_number: 21, nonstop: true)
-        visit "/airlines/airline1.id/"
+        
+        visit "/airlines/#{airline1.id}"
 
-        expect(@airline.flights_count).to eq(4)
         expect(page).to have_content("Total Number of Flights: 4")
       end
     end
