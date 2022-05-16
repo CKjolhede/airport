@@ -4,4 +4,9 @@ class Airline < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :rating
 
+  
+  def self.sort_by_creation
+    order(created_at: :asc)
+  end
+  
 end

@@ -1,5 +1,3 @@
-# airline_spec
-
 require 'rails_helper'
 
 RSpec.describe Airline, type: :model do
@@ -10,5 +8,18 @@ RSpec.describe Airline, type: :model do
 
   describe 'relationships' do
     it { should have_many :flights }
+  end
+
+  describe 'class method' do
+    it 'puts airlines in ascending order by creation date' do
+      airline2 = Airline.create!(name: 'Conurbation Airlines', rating: 1)
+      sleep 1
+      airline1 = Airline.create!(name: 'Alpha Air Lines', on_time: 'true', rating: 2)
+      sleep 1
+      airline4 = Airline.create!(name: 'Divided Airlines', rating: 7)
+      sleep 1
+      airline3 = Airline.create!(name: 'North East Airlines', on_time: 0, rating: 8)
+      expect(Airline.sort_by_creation).to eq([airline2, airline1, airline4, airline3])
+    end
   end
 end
