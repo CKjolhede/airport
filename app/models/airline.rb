@@ -8,5 +8,9 @@ class Airline < ApplicationRecord
   def self.sort_by_creation
     order(created_at: :asc)
   end
+
+  def flights_count
+    flights.count
+  end
   
 end
