@@ -23,7 +23,7 @@ RSpec.describe 'Airline_flights', type: :feature do
           expect(page).to_not have_content('Cleveland' || 'New Orleans')
           expect(page).to_not have_content('Flight 21' || 'Flight 22')
         end
-      end    
+      end
     end
   end
 end
