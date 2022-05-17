@@ -10,7 +10,7 @@ td {
 </style>
 </head>
 <body>
-<h2>All Flights</h2>
+<h2>All Airlines</h2>
 
 <table>
 <caption><h3><strong>All Airlines</strong></h3></caption>
@@ -22,10 +22,9 @@ td {
 <% @airlines.each do |airline|%> 
     <tr>
       <td><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></td>
-      <td><%="#{airline.create_at}"%></td>
-      <td><%= button_to "delete", airline_path
-      (:id => airline.id), :method => :delete %></td>
-      <td><%="#{flight.nonstop}"%></td>
+      <td><%="#{airline.created_at}"%></td>
+      <td><%# <%= button_to "delete", airline_path
+      (:id => airline.id), :method => :delete %> %> </td> 
     </tr>
 <% end %>
 </table>

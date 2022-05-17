@@ -6,3 +6,4 @@
 <p><%= "#{@airline.on_time ? 'All Flights On Time' : 'Some Flights Experiencing Delays'}" %></p>
 <p><%= "Airline Rating = #{@airline.rating}"%></strong></div></p>
 <p><%= "Total Number of Flights: #{@airline.flights_count}" %></p>
+<p><%= link_to "Flight Listings", "/airlines/#{@airline.id}/flights" %>

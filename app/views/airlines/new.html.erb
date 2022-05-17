@@ -1,0 +1,8 @@
+render '/layouts/navbar'
+
+
+<p><%= form_with url: '/airlines', method: :post, local: true do |form| %></p>
+<p><%= form.label :name %></p>
+<p><%= form.text_field :name %></p>
+<%= form.submit 'Create Airline' %>
+<% end %>
