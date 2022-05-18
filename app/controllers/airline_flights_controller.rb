@@ -2,7 +2,7 @@ class AirlineFlightsController < ApplicationController
 
   def index
     @airline = Airline.find(params[:id])
-    @flights = @airline.flights
+    @flights = @airline.flights.alphabetized
   end
 
   def new 
