@@ -5,6 +5,9 @@ class AirlineFlightsController < ApplicationController
     @flights = @airline.flights
   end
 
+  def new 
+  end
+
 
   def create
     @airline = Airline.find(params[:id])
