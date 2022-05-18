@@ -11,4 +11,14 @@ RSpec.describe Flight, type: :model do
   describe 'relationship' do
     it { should belong_to :airline }
   end
-end
+
+  describe 'class variables' do
+    it '#nonstops sorts to only nonstop flights' do
+      airline1 = Airline.create!(name: 'Alpha Air Lines', on_time: false, rating: 2)
+      flight11 = airline1.flights.create!(destination: 'Miami', flight_number: 11, nonstop: true)
+      flight12 = airline1.flights.create!(destination: 'New York', flight_number: 12, nonstop: false)
+
+        expect(Flight.nonstops).to eq([flight11])
+    end
+  end
+ end
