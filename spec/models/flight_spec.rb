@@ -20,5 +20,15 @@ RSpec.describe Flight, type: :model do
 
         expect(Flight.nonstops).to eq([flight11])
     end
+
+    it 'puts flights in alphabetical order by destination' do
+      airline1 = Airline.create!(name: 'Alpha Air Lines', on_time: false, rating: 2)
+      flight11 = airline1.flights.create!(destination: 'Miami', flight_number: 11, nonstop: true)
+      flight12 = airline1.flights.create!(destination: 'New York', flight_number: 12, nonstop: false)
+      flight13 = airline1.flights.create!(destination: 'Atlanta', flight_number: 13, nonstop: true)
+      flight14 = airline1.flights.create!(destination: 'Washington DC', flight_number: 14, nonstop: false)
+
+    expect(Flight.alphabetized).to eq([flight13, flight11, flight12, flight14])
+    end
   end
  end
