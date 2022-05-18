@@ -60,4 +60,17 @@ RSpec.describe Airline, type: :feature do
 
     end
   end
+
+  describe 'Update Link' do
+    it 'for every airline' do
+      visit '/airlines'
+
+      airlines = Airline.all
+      airlines.each do |airline|
+        within("#airline-#{airline.id}")
+          expect(page).to have_content("Update Airline")
+      
+      end
+    end
+  end
 end

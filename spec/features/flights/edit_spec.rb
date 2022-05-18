@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe Flight, type: :feature do
   context 'edit page form' do
     it 'has a field for each parameter' do
@@ -23,15 +22,15 @@ RSpec.describe Flight, type: :feature do
 
       fill_in "Flight Number", with: 500
       select "True", from: :nonstop
-      fill_in "Destination", with: "Miami"
+      fill_in "Destination", with: "Toledo"
 
       click_on "Update Flight"
     
       expect(current_path).to eq("/flights/#{flight11.id}")
-      
+      save_and_open_page
       expect(page).to have_content('Flight 500')
       expect(page).to have_content('true')
-      expect(page).to have_content('Miami')      
+      expect(page).to have_content('Toledo')      
     end
   end
 end

@@ -36,6 +36,7 @@ RSpec.describe Flight, type: :feature do
         expect(page).to have_content(flight.destination.to_s)
         expect(page).to have_content(flight.airline.name.to_s)
         expect(page).to have_content(flight.nonstop.to_s)
+        expect(page).to have_content("Update Flight")
       end
     end
   end
