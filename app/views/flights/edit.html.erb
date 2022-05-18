@@ -1,0 +1,11 @@
+<h1>Update Flight</h1>
+<p><%= form_with url: "/flights/#{@flight.id}", method: :patch, local: true do |form| %></p>
+<p><%= form.label :flight_number, "Flight Number" %></p>
+<p><%= form.number_field :flight_number, in: 10..1000, step: 1 %></p>
+<p><%= form.label "This is a non-stop flight" %></p>
+<p><%= form.select :nonstop, ["True", "False"] %></p>
+<p><%= form.label :destination, 'Destination' %></p>
+<p><%= form.text_field :destination %></p>
+<%= form.submit 'Update Flight', formmethod: :patch %>
+</section>
+<% end %>
