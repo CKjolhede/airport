@@ -65,7 +65,7 @@ RSpec.describe Flight, type: :feature do
       visit '/flights'
 
       within("#flight-#{flight41.id}")
-        click_on "Delete Flight"
+        click_on "Delete Flight #{flight41.flight_number}"
       expect(current_path).to eq('/flights')
       expect(page).to_not have_content("Las Vegas")
       expect(page).to have_content("Seattle")

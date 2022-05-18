@@ -21,6 +21,7 @@ td {
     <th>Airline</th>
     <th>Nonstop?</th>
     <th>Update</th>
+    <th>Delete</th>
   </tr>
 <% @flights.each do |flight|%>
   <section id = "Flight-<%=flight.id%>">
@@ -30,6 +31,7 @@ td {
       <td><%="#{flight.airline.name}"%></td>
       <td><%="#{flight.nonstop}"%></td>
       <td><%= link_to "Update Flight", "/flights/#{flight.id}/edit", method: :get %>
+      <td><%= link_to "Delete Flight #{flight.flight_number}", "/flights/#{flight.id}", method: :delete %></p>
     </tr>
   </section>
 <% end %>
