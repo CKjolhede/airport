@@ -22,7 +22,7 @@ td {
 <% @flights.each do |flight|%>
   <section id = "Flight-<%=flight.id%>">
     <tr>
-      <td><%="Flight #{flight.id}"%></td>
+      <td><%=link_to "Flight #{flight.id}", "/flights/#{flight.id}"%></td>
       <td><%="#{flight.destination}"%></td>
       <td><%="#{flight.airline.name}"%></td>
       <td><%="#{flight.nonstop}"%></td>

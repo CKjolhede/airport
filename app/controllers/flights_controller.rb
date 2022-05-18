@@ -7,4 +7,9 @@ class FlightsController < ApplicationController
   def index
     @flights = Flight.all
   end
+
+  def edit
+    @flight_id = params[:id]
+    @flight = Flight.find(params[:id])
+  end
 end
