@@ -5,7 +5,7 @@ table { border-collapse: collapse;
 width: 50%;}
 tr {border-bottom: 1px solid #ddd;}
 td {
-  padding-left: 125px; padding-top: 5px; padding-bottom: 5px;
+  padding-left: 70px; padding-top: 5px; padding-bottom: 5px;
 }
 </style>
 </head>
@@ -23,9 +23,9 @@ td {
     <tr>
       <td><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></td>
       <td><%="#{airline.created_at}"%></td>
-      <td><%# <%= button_to "delete", airline_path
-      (:id => airline.id), :method => :delete %> %> </td> 
+      <td><%= button_to "Delete Airline", "/airlines/airline_:id", method: :delete %> </td> 
     </tr>
 <% end %>
 </table>
+<p><h3><%=button_to "Create a New Airline", "/airlines/new", method: :get %></h3></p>
 </body>
