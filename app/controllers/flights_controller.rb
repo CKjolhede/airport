@@ -25,6 +25,11 @@ class FlightsController < ApplicationController
     redirect_to "/flights/#{flight.id}"
   end
 
+    def destroy
+    Flight.destroy(params[:id])
+    redirect_to '/flights'
+  end
+
   private
 
     def flight_params
