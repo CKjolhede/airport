@@ -29,6 +29,6 @@ td {padding-left: 100px; padding-top: 5px; padding-bottom: 5px;}
   </section>
 <% end %>
 </table>
-<p><h3><%=button_to "Create a New Flight", "/airlines/:id/flights/new", method: :get %></h3></p>
+<p><h3><%=button_to "Create a New Flight", "/airlines/#{@airline.id}/flights/new", method: :get %></h3></p>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<section id = "new_airline_flight_form">
+<h1>Create New Flight</h1>
+<p><%= form_with url: "/airlines/#{params[:id]}/flights", method: :post, local: true do |form| %></p>
+<p><%= form.label :flight_number, "Flight Number" %></p>
+<p><%= form.number_field :flight_number, in: 10..1000, step: 1 %></p>
+<p><%= form.label "This is a non-stop flight" %></p>
+<p><%= form.select :nonstop, ["True", "False"] %></p>
+<p><%= form.label :destination, 'Destination' %></p>
+<p><%= form.text_field :destination %></p>
+<%# <% form.hidden_field :airline_id_hidden, value: "#{params[:id]}" %> %>
+<%= form.submit 'Create Flight', formmethod: :post %>
+</section>
+<% end %>
