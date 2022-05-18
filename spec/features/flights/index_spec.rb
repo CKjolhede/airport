@@ -37,6 +37,7 @@ RSpec.describe Flight, type: :feature do
         expect(page).to have_content(flight.airline.name.to_s)
         expect(page).to have_content(flight.nonstop.to_s)
         expect(page).to have_content("Update Flight")
+        expect(page).to have_content("Delete Flight")
       end
     end
     
@@ -50,11 +51,24 @@ RSpec.describe Flight, type: :feature do
       visit '/flights'
       
       click_on "Nonstop Flights Only"
-save_and_open_page
       expect(current_path).to eq("/flights/nonstop")
       expect(page).to have_content("Miami")
       expect(page).to have_content("Cleveland")
       expect(page).to_not have_content("New York")
+    end
+
+    it "delete button removes the flight" do
+      airline4 = Airline.create!(name: 'Divided Airlines', rating: 5)
+      flight41 = airline4.flights.create!(destination: 'Las Vegas', flight_number: 41, nonstop: true)
+      flight42 = airline4.flights.create!(destination: 'Seattle', flight_number: 42, nonstop: true)
+      
+      visit '/flights'
+
+      within("#flight-#{flight41.id}")
+        click_on "Delete Flight"
+      expect(current_path).to eq('/flights')
+      expect(page).to_not have_content("Las Vegas")
+      expect(page).to have_content("Seattle")
     end
   end
 end
