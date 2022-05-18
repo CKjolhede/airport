@@ -8,6 +8,10 @@ class FlightsController < ApplicationController
     @flights = Flight.all
   end
 
+  def nonstop_flights
+    @flights = Flight.nonstops
+  end
+
   def edit
     @flight_id = params[:id]
     @flight = Flight.find(params[:id])

@@ -33,6 +33,19 @@ RSpec.describe 'Airline_flights', type: :feature do
         
         expect(current_path).to eq("/airlines/#{airline1.id}/flights/new")
       end
+
+      it 'displays flights in alphabetical order by destination' do
+
+        airline1 = Airline.create!(name: 'Alpha Air Lines', on_time: false, rating: 2)
+        flight11 = airline1.flights.create!(destination: 'Miami', flight_number: 11, nonstop: true)
+        flight12 = airline1.flights.create!(destination: 'New York', flight_number: 12, nonstop: false)
+        flight21 = airline1.flights.create!(destination: 'Cleveland', flight_number: 21, nonstop: true)
+        
+        visit "/airlines/#{airline1.id}/flights"
+
+        expect(flight21.destination).to appear_before(flight11.destination)
+        expect(flight11.destination).to appear_before(flight12.destination)
+      end
     end
   end
 end

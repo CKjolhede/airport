@@ -20,7 +20,7 @@ RSpec.describe Flight, type: :feature do
     end
 
     it 'has a link to Update Flight information' do
-save_and_open_page
+
       click_on "Update Flight"
 
       expect(current_path).to eq("/flights/#{@flight11.id}/edit")
