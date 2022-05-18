@@ -1,7 +1,7 @@
 <html>
 <head>
 <style>
-table { border-collapse: collapse;
+table { bord0er-collapse: collapse;
 width: 50%;}
 tr {border-bottom: 1px solid #ddd;}
 td {
@@ -18,12 +18,14 @@ td {
     <th>Airline</th>
     <th>Date/Time Record Created</th>
     <th>Delete Record?</th>
+    <th>Update Airline</th>
   </tr>
 <% @airlines.each do |airline|%> 
     <tr>
       <td><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></td>
       <td><%="#{airline.created_at}"%></td>
       <td><%= button_to "Delete Airline", "/airlines/airline_:id", method: :delete %> </td> 
+      <td><p><%= button_to "Update Airline", "/airlines/#{airline.id}/edit", method: :get %></p>
     </tr>
 <% end %>
 </table>
