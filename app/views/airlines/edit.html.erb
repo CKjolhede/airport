@@ -1,12 +1,12 @@
-<section id = "new_airline_form">
-<h1>Create New Airline</h1>
-<p><%= form_with url: "/airlines", method: :post, local: true do |form| %></p>
+<section id = "edit_airline_form">
+<h1>Update Airline</h1>
+<p><%= form_with url: "/airlines/#{@airline.id}", method: :patch, local: true do |form| %></p>
 <p><%= form.label :name, "Airline's Name" %></p>
 <p><%= form.text_field :name %></p>
 <p><%= form.label "All flights currently on time" %></p>
-<p><%= form.select :on_time, ["True", "False"] %></p>
+<p><%= form.select :on_time, ["True", "False"]%></p>
 <p><%= form.label :rating, 'Rating' %></p>
 <p><%= form.number_field :rating, in: 1..10, step: 1 %></p>
-<%= form.button 'Create Airline', formmethod: :post %>
+<%= form.button 'Update Airline' %>
 </section>
 <% end %>

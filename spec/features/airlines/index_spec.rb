@@ -57,7 +57,7 @@ RSpec.describe Airline, type: :feature do
     visit '/airlines'
     click_button "Create a New Airline"
     expect(current_path).to eq('/airlines/new')
-    save_and_open_page
+
     end
   end
 end

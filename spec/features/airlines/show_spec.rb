@@ -63,9 +63,10 @@ RSpec.describe Airline, type: :feature do
         flight14 = airline1.flights.create(destination: 'Washington DC', flight_number: 14, nonstop: false)
 
         visit "/airlines/#{airline1.id}"
+
         click_on "Update Airline"
         
-        expect(current_url).to eq("/airlines/#{airline.id}/edit")
+        expect(current_path).to eq("/airlines/#{airline1.id}/edit")
       end
     end
   end
