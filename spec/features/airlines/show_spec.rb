@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Airline, type: :feature do
   describe 'Airlines Show' do
-    context 'when on_time == false' do
+    context "when on_time == false" do
       it 'shows the Airline id and all attributes' do
         airline1 = Airline.create(name: 'Alpha Air Lines', rating: 2)
         airline2 = Airline.create(name: 'Conurbation Airlines', rating: 4)
         airline3 = Airline.create(name: 'North East Airlines', rating: 7)
-        airline4 = Airline.create(name: 'Divided Airlines', on_time: 'false', rating: 7)
+        airline4 = Airline.create(name: 'Divided Airlines', on_time: false, rating: 7)
         visit "/airlines/#{airline4.id}"
 
         expect(page).to have_content('Divided Airlines')
@@ -51,6 +51,22 @@ RSpec.describe Airline, type: :feature do
         visit "/airlines/#{airline1.id}"
 
         expect(page).to have_content("Total Number of Flights: 4")
+      end
+    end
+
+    context 'update button' do
+      it 'takes you to the airline show edit page' do
+         airline1 = Airline.create(name: 'Alpha Air Lines', on_time: 'true', rating: 2)
+        flight11 = airline1.flights.create(destination: 'Miami', flight_number: 11, nonstop: true)
+        flight12 = airline1.flights.create(destination: 'New York', flight_number: 12, nonstop: false)
+        flight13 = airline1.flights.create(destination: 'Atlanta', flight_number: 13, nonstop: true)
+        flight14 = airline1.flights.create(destination: 'Washington DC', flight_number: 14, nonstop: false)
+
+        visit "/airlines/#{airline1.id}"
+
+        click_on "Update Airline"
+        
+        expect(current_path).to eq("/airlines/#{airline1.id}/edit")
       end
     end
   end

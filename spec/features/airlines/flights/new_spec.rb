@@ -25,7 +25,7 @@ RSpec.describe Flight, type: :feature do
       click_on 'Create Flight'
       expect(current_path).to eq("/airlines/#{airline.id}/flights")
       expect(page).to have_content("Colorado Springs")
-save_and_open_page
+
     end
   end
 end

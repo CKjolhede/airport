@@ -3,7 +3,10 @@
 <div>
 <h2>Airline Information:</h2>
 <strong><p><%="Airline ID = #{@airline.id}"%></p>
-<p><%= "#{@airline.on_time ? 'All Flights On Time' : 'Some Flights Experiencing Delays'}" %></p>
+<p><%= "#{@airline.on_time==true ? 'All Flights On Time' : 'Some Flights Experiencing Delays'}" %></p>
 <p><%= "Airline Rating = #{@airline.rating}"%></strong></div></p>
 <p><%= "Total Number of Flights: #{@airline.flights_count}" %></p>
-<p><%= link_to "Flight Listings", "/airlines/#{@airline.id}/flights" %>
+<p><%= button_to "Flight Listings", "/airlines/#{@airline.id}/flights" %></p>
+<p><%= button_to "Update Airline", "/airlines/#{@airline.id}/edit", method: :get %></p>
+
+<p>
