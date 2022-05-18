@@ -8,5 +8,6 @@
 <p><%= "Total Number of Flights: #{@airline.flights_count}" %></p>
 <p><%= button_to "Flight Listings", "/airlines/#{@airline.id}/flights" %></p>
 <p><%= button_to "Update Airline", "/airlines/#{@airline.id}/edit", method: :get %></p>
+<p><%= button_to "Delete Airline", "/airlines/#{@airline.id}", method: :delete %></p>
 
 <p>
