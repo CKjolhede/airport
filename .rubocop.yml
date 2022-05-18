@@ -32,5 +32,7 @@ Lint/UselessAssignment:
 Metrics/BlockLength:
   Enabled: false
   
+VariableInspector:
+  Enabled: false
 
 

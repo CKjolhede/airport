@@ -33,7 +33,7 @@ class AirlinesController < ApplicationController
 private
 
     def airline_params
-      params.permit(:name, :on_time, :rating)
+      params.permit(:name, :on_time, :rating, :id)
     end
 
 end
