@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/airlines/:id/flights/new', to: 'airline_flights#new'
   post "/airlines/:airline_id/flights", to: 'airline_flights#create'
   
+  get '/flights/nonstop', to: 'flights#nonstop_flights'
   get '/flights',           to: 'flights#index'
   get '/flights/new',       to: 'flights#new'
   get '/flights/:id/edit',  to: 'flights#edit'

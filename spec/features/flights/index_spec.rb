@@ -28,7 +28,7 @@ RSpec.describe Flight, type: :feature do
       flight44 = airline4.flights.create!(destination: 'Los Angelos', flight_number: 44, nonstop: true)
 
       visit '/flights'
-
+      
       flights = Flight.all
       flights.each do |flight|
         within("#flight-#{flight.id}")
@@ -38,6 +38,23 @@ RSpec.describe Flight, type: :feature do
         expect(page).to have_content(flight.nonstop.to_s)
         expect(page).to have_content("Update Flight")
       end
+    end
+    
+    it 'has a link to nonstop flights only' do
+      airline1 = Airline.create!(name: 'Alpha Air Lines', on_time: false, rating: 2)
+      flight11 = airline1.flights.create!(destination: 'Miami', flight_number: 11, nonstop: true)
+      flight12 = airline1.flights.create!(destination: 'New York', flight_number: 12, nonstop: false)
+      
+      airline2 = Airline.create!(name: 'Conurbation Airlines', on_time: false, rating: 4)
+      flight21 = airline2.flights.create!(destination: 'Cleveland', flight_number: 21, nonstop: true)
+      visit '/flights'
+      
+      click_on "Nonstop Flights Only"
+save_and_open_page
+      expect(current_path).to eq("/flights/nonstop")
+      expect(page).to have_content("Miami")
+      expect(page).to have_content("Cleveland")
+      expect(page).to_not have_content("New York")
     end
   end
 end
