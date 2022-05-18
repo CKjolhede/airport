@@ -2,7 +2,7 @@
 <head>
 <style>
 table { bord0er-collapse: collapse;
-width: 50%;}
+width: 75%;}
 tr {border-bottom: 1px solid #ddd;}
 td {
   padding-left: 70px; padding-top: 5px; padding-bottom: 5px;
@@ -21,12 +21,14 @@ td {
     <th>Update Airline</th>
   </tr>
 <% @airlines.each do |airline|%> 
+  <section id = "airline-<%=airline.id%>">
     <tr>
       <td><%= link_to "#{airline.name}", "/airlines/#{airline.id}"%></td>
       <td><%="#{airline.created_at}"%></td>
-      <td><%= button_to "Delete Airline", "/airlines/airline_:id", method: :delete %> </td> 
+      <td><%= link_to "Delete #{airline.name}", "/airlines/#{airline.id}", method: :delete %> </td> 
       <td><p><%= button_to "Update Airline", "/airlines/#{airline.id}/edit", method: :get %></p>
     </tr>
+    </section>
 <% end %>
 </table>
 <p><h3><%=button_to "Create a New Airline", "/airlines/new", method: :get %></h3></p>
