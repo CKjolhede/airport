@@ -10,19 +10,17 @@ Rails.application.routes.draw do
   post '/airlines', to: 'airlines#create'
   patch '/airlines/:id', to: 'airlines#update'
   delete '/airlines/:id', to: 'airlines#destroy'
-
   
-
   get '/airlines/:id/flights', to: 'airline_flights#index'
   get '/airlines/:id/flights/new', to: 'airline_flights#new'
   post "/airlines/:airline_id/flights", to: 'airline_flights#create'
- 
   
   get '/flights',           to: 'flights#index'
   get '/flights/new',       to: 'flights#new'
-  get '/flights/:id',       to: 'flights#show'
   get '/flights/:id/edit',  to: 'flights#edit'
+  get '/flights/:id',       to: 'flights#show'
   post '/flights',          to: 'flights#create'
   patch '/flights/:id',     to: 'flights#update'
   delete '/flights/:id',    to: 'flights#destroy'
 end
+

@@ -13,7 +13,7 @@ td {
 
 <section id = "Flight">
 <table>
-<caption><strong><%="Flight #{@flight.flight_number}"%></caption>
+<caption><strong><h3><%="Flight #{@flight.flight_number}"%></h3><br><%= link_to "Update Flight", "/flights/#{@flight.id}/edit", method: :get %></caption>
   <tr>
     <th>Flight ID</th>
     <td><%="#{@flight.id}"%></td>

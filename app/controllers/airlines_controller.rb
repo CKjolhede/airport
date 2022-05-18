@@ -33,10 +33,6 @@ class AirlinesController < ApplicationController
     redirect_to "/airlines/#{airline.id}"
   end
 
-private
 
-    def airline_params
-      params.permit(:name, :on_time, :rating)
-    end
 
 end
