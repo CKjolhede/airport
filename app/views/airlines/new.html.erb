@@ -1,8 +1,12 @@
-render '/layouts/navbar'
-
-
+<section id = "new_airline_form">
+<h1>Create New Airline</h1>
 <p><%= form_with url: '/airlines', method: :post, local: true do |form| %></p>
-<p><%= form.label :name %></p>
+<p><%= form.label :name, "Airline's Name" %></p>
 <p><%= form.text_field :name %></p>
-<%= form.submit 'Create Airline' %>
+<p><%= form.label "All flights currently on time" %></p>
+<p><%= form.select :on_time, ["True", "False"] %></p>
+<p><%= form.label :rating, 'Rating' %></p>
+<p><%= form.number_field :rating, in: 1..5, step: 1 %></p>
+<%= form.button 'Create Airline', formmethod: :post %>
+</section>
 <% end %>
