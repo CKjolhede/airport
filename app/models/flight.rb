@@ -7,4 +7,8 @@ class Flight < ApplicationRecord
   def self.nonstops
     where(nonstop: true)
   end
+
+  def self.alphabetized
+    order(:destination)
+  end
 end
