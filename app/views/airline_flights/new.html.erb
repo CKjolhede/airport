@@ -7,7 +7,6 @@
 <p><%= form.select :nonstop, ["True", "False"] %></p>
 <p><%= form.label :destination, 'Destination' %></p>
 <p><%= form.text_field :destination %></p>
-<%# <% form.hidden_field :airline_id_hidden, value: "#{params[:id]}" %> %>
 <%= form.submit 'Create Flight', formmethod: :post %>
 </section>
 <% end %>

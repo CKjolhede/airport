@@ -8,14 +8,11 @@ class AirlineFlightsController < ApplicationController
   def new 
   end
 
-
   def create
     @airline = Airline.find(params[:airline_id])
     @airline.flights.create(flight_params)
     redirect_to "/airlines/#{@airline.id}/flights"
   end
-
-
 
   private
 
@@ -23,4 +20,4 @@ class AirlineFlightsController < ApplicationController
     params.permit(:destination, :flight_number, :nonstop, :airline_id)
   end
   
-  end
+end
