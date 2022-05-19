@@ -17,15 +17,14 @@ class FlightsController < ApplicationController
     @flight = Flight.find(params[:id])
   end
 
-   def update
+  def update
     flight = Flight.find(params[:id])
     flight.update(flight_params)
     flight.save
-
     redirect_to "/flights/#{flight.id}"
   end
 
-    def destroy
+  def destroy
     Flight.destroy(params[:id])
     redirect_to '/flights'
   end

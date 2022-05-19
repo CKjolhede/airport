@@ -29,12 +29,10 @@ class AirlinesController < ApplicationController
     airline = Airline.find(params[:id])
     airline.update(airline_params)
     airline.save
-
     redirect_to "/airlines/#{airline.id}"
   end
 
   def airline_params
       params.permit(:name, :on_time, :rating)
-    end
-
+  end
 end

@@ -67,8 +67,8 @@ RSpec.describe Airline, type: :feature do
       airlines = Airline.all
       airlines.each do |airline|
         within("#airline-#{airline.id}")
-          expect(page).to have_content("Update Airline")
-       end
+      expect(page).to have_content("Update Airline")
+      end
     end
   end
 
@@ -80,7 +80,6 @@ RSpec.describe Airline, type: :feature do
       @airline4 = Airline.create!(name: 'Divided Airlines', rating: 5)
 
       visit '/airlines'
-save_and_open_page
       airlines = Airline.all
       airlines.each do |airline|
       expect(page).to have_content("Delete #{airline.name}")
