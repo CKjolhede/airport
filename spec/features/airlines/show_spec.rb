@@ -69,5 +69,30 @@ RSpec.describe Airline, type: :feature do
         expect(current_path).to eq("/airlines/#{airline1.id}/edit")
       end
     end
+
+    context "delete button" do
+      it 'removes the record' do
+        airline1 = Airline.create(name: 'Alpha Air Lines', rating: 2)
+          flight11 = airline1.flights.create(destination: 'Miami', flight_number: 11, nonstop: true)
+          flight12 = airline1.flights.create(destination: 'New York', flight_number: 12, nonstop: false)
+        airline2 = Airline.create(name: 'Conurbation Airlines', rating: 4)
+          flight13 = airline2.flights.create(destination: 'Atlanta', flight_number: 13, nonstop: true)
+        visit "airlines/#{airline1.id}"
+
+        click_on "Delete Airline"
+
+        expect(current_path).to eq("/airlines")
+        expect(page).to_not have_content("Alpha Air Lines")
+        expect(page).to have_content("Conurbation Airlines")
+
+        click_on "Flights"
+
+        expect(current_path).to eq("/flights")
+        expect(page).to_not have_content("Miami")
+        expect(page).to_not have_content("New York")
+        expect(page).to have_content("Atlanta")
+
+      end
+    end
   end
 end
